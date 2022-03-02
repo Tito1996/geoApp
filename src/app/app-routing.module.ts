@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'game',
     loadChildren:() => import(`./modules/game/game.module`).then(m => m.GameModule)
+  },
+  {
+    path: 'error',
+    loadChildren:() => import(`./modules/error/error.module`).then(m => m.ErrorModule)
   }
 ];
 
