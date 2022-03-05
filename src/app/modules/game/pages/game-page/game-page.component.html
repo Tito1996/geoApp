@@ -1,1 +1,6 @@
-<p>game-page works!</p>
+<app-header></app-header>
+<div class="game-utilities">
+    <button (click)="getLocation()">Comprueba</button>
+    <p>{{longitude}}, {{latitude}}</p>
+</div>
+<app-enigmas></app-enigmas>

@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path:'',
     component: LoginPageComponent
-  },
-  {
-    path: '**',
-    redirectTo: '/error/404'
   }
 ];
 

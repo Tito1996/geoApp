@@ -33,7 +33,7 @@ export class LoginPageComponent implements OnInit {
   sendLogin(): void {
     const {name, password} = this.formLogin.value;
     if(this._loginService.sendCredentials(name, password)) {
-      this._router.navigate(['']);
+      this._router.navigate(['/home']);
     } else this.correctUser = false;
   }
 

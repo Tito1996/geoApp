@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SessionGuard } from '@core/guards/session.guard';
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: '',
     loadChildren:() => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
   },
   {
-    path: '',
+    path: 'home',
     loadChildren:() => import(`./modules/home/home.module`).then(m => m.HomeModule)
   },
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'error',
     loadChildren:() => import(`./modules/error/error.module`).then(m => m.ErrorModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/error/404'
   }
 ];
 

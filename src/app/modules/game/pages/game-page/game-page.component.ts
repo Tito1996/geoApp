@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from '@shared/services/game.service';
 
 @Component({
   selector: 'app-game-page',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePageComponent implements OnInit {
 
-  constructor() { }
+  public latitude: any;
+  public longitude: any;
+
+  constructor(
+    private _gameService: GameService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  getLocation() {
+    this._gameService.getPosition().then(pos => {
+      this.latitude = pos.lat;
+      this.longitude = pos.lng;
+    })
   }
 
 }
