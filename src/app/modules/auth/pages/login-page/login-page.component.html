@@ -1,0 +1,21 @@
+<h1>Qui està intentant accedir?</h1>
+
+<div class="form-container">    
+    <form (submit)="sendLogin()" [formGroup]="formLogin" class="form-login">
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <label for="name">Digues el teu nom</label>
+            <input formControlName="name" type="text" name="name" id="name">
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <label for="password">Quina es la paraula secreta?</label>
+            <input formControlName="password" type="password" name="password" id="password">
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <button [disabled]="formLogin.invalid" class="login-button">Pasar</button>
+        </div>
+    </form>
+</div>
+
+<div *ngIf="!correctUser">
+    <h2> NO PUEDES PASAR </h2>
+</div>
