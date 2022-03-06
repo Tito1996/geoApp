@@ -8,8 +8,17 @@ import { GameService } from '@shared/services/game.service';
 })
 export class GamePageComponent implements OnInit {
 
-  public latitude: any;
-  public longitude: any;
+  public latitude: any = 0;
+  public longitude: any = 0;
+
+  public position = {
+    lat: this.latitude,
+    lng: this.longitude
+  }
+  public casa = {
+    lat: 41.38096630596837, 
+    lng: 2.179189074799403 
+  }
 
   constructor(
     private _gameService: GameService
@@ -20,8 +29,8 @@ export class GamePageComponent implements OnInit {
 
   getLocation() {
     this._gameService.getPosition().then(pos => {
-      this.latitude = pos.lat;
-      this.longitude = pos.lng;
+      this.position.lat = pos.lat;
+      this.position.lng  = pos.lng;
     })
   }
 

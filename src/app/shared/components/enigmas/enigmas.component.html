@@ -1,1 +1,6 @@
-<p>enigmas works!</p>
+<div *ngIf="prueba1">
+    <app-enigma1 (nextEvent)="receiveMessage($event)"></app-enigma1>
+</div>
+<div *ngIf="prueba2">
+    <app-enigma2></app-enigma2>
+</div>

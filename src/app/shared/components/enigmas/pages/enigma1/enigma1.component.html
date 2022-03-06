@@ -1,0 +1,21 @@
+<div class="contenedor-enigma">
+    <h4>Enigma 1: introducció & desdejuni</h4>
+    <p>Este primer i sencill enigma et servira per a que conegues com funcionarà la mecanica del joc... i per a desdejunar.</p>
+    <p>El primer que aparexerà serà la pista de la següent manera:</p>
+    <h5>Pista:</h5>
+    <img src="../../../../../../assets/img/unnamed.jpg" alt="Casa amatller">
+    <p>Dirigete al lugar que se muestra en la foto, cuando llegues podrás continuar</p>
+    <button (click)="comprobarCoord()">He llegado!</button>
+</div>
+
+<div class="respuesta-correcta" *ngIf="acierto">
+    <p>Muy bien, has llegado!</p>
+    <p>Recompensa:</p>
+    <ul>
+        <li>Desayunar en Amatller</li>
+        <li><button (click)="goToNext()">Siguiente Pista</button></li>
+    </ul>
+</div>
+<div class="respuesta-incorrecta" *ngIf="fallo">
+    <p>¡¡TODAVIA NO HAS LLEGADO!!</p>
+</div>

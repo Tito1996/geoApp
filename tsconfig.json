@@ -23,6 +23,7 @@
       "@modules/*": ["src/app/modules/*"],
       "@data/*": ["src/app/data/*"],
       "@shared/*": ["src/app/shared/*"],
+      "@assets/*": ["src/assets/*"],
     },
     "lib": [
       "es2020",

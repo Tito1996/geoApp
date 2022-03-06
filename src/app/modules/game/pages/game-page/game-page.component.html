@@ -1,6 +1,6 @@
 <app-header></app-header>
 <div class="game-utilities">
     <button (click)="getLocation()">Comprueba</button>
-    <p>{{longitude}}, {{latitude}}</p>
+    <p>{{position.lat}} {{position.lng}}</p>
 </div>
-<app-enigmas></app-enigmas>
+<app-enigmas [posicion]="position"></app-enigmas>
