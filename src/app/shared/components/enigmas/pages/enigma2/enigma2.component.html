@@ -1,1 +1,16 @@
-<p>enigma2 works!</p>
+<div class="contador" *ngIf="!mostrar">
+    <p>{{minutos}}:{{cuenta % 60}}</p>
+    <p>Aprovecha el tiempo de descanso para desayunar :)</p>
+</div>
+<div class="segundapista" *ngIf="true">
+    <p>Perfecte, ara que ja saps com funciona el tema, podem començar amb la busqueda dels tresors.</p>
+    <p>A clar, que no saps quins son els tresors XD, estic parlant dels teus regals, ja que no sabem exactament on estan i tens que averiuar-ho seguint les pistes :O</p>
+    <p>Estas preparada?</p>
+    <ul>
+        <li><button (click)="pastillaAzul('si')">Si</button></li>
+        <li><button (click)="pastillaAzul('no')">No</button></li>
+    </ul>
+</div>
+<div *ngIf="no">
+    No no es una opcio valida...sorry :(
+</div>

@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div>
+    <p>
+        Supose que la pista no ha servit de molt XD. Pero no anava a ser tan facil.
+    </p>
+    <p>
+        A per la següent pista.
+    </p>
+    <p>
+        Per a este joc necessite que fages unes fotos i les puges a instagram, amb el Hastag #huieselmeuchachicumple.
+    </p>
+    <p>
+        Quan ho tingues conseguiras la contraseña per a poder seguir.
+    </p>
+    <p>
+        Les fotos son:
+    </p>
+    <ul>
+        <li>Foto en Mathom</li>
+        <li>Foto amb el teu acompanyant</li>
+        <li>Foto en una tenda de roba</li>
+        <li>Foto en una font</li>
+        <li>Foto amb una estatua</li>
+    </ul>
+    <form (submit)="next()" [formGroup]="formFotos">
+        <input formControlName="pass" type="text" name="pass" id="pass">
+        <button [disabled]="formFotos.invalid">Contraseña</button>
+    </form>
+    <div *ngIf="acierto">
+        <p>Proba superada has tret un 216 sobre 100, per tant aqui tens la següent pista</p>
+        <h3>Italo-mediterraneo</h3>
+        <a routerLink="/game/game4"> Seguim avant -></a>
+    </div>
+</div>

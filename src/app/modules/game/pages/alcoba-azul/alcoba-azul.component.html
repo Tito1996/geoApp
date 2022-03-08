@@ -1,0 +1,61 @@
+<app-header></app-header>
+<div class="prueba prueba3" *ngIf="prueba3">
+    <p>Ara que em desdejunat i tenim energies comensem amb la busqueda de tresors</p>
+    <h4>El primer lloc on trobarás una pista es en la vostra perdicio...saps on es?</h4>
+
+    <form (submit)="contesta()" [formGroup]="formPrueba3">
+        <input formControlName="inputPrueba3" type="text" name="inputPrueba3" id="inputPrueba3">
+        <button [disabled]="formPrueba3.invalid">Contesta</button>
+    </form>
+
+    <div *ngIf="prueba4">
+        <p>Excate, doncs ya saps on tens que anar.</p>
+        <p>Go!</p>
+        <button (click)="comprobarUbicacion()">Ja he arribat!!</button>
+    </div>
+
+    <p *ngIf="error">Error, torna a intentaro</p>
+    <p *ngIf="error && prueba4">Apropat un poquet més</p>
+</div>
+
+<div class="prueba5" *ngIf="prueba5">
+    <p>Molt be, has arribat. Ara toca contestar unes preguntes faciletes:</p>
+    <form (submit)="contestaFormulari()" [formGroup]="formulari">
+        <div class="pregunta pregunta1">
+            <label for="pregunta1"><h4>1)Per a cuantes persones solem comprar els jocs de Mathom?</h4></label>
+            <input formControlName="pregunta1" type="text" name="pregunta1" id="pregunta1">
+        </div>
+        <div class="pregunta pregunta2">
+            <label for="pregunta2"><h4>2)Quin va ser el primer joc de taula que vam comprar en Mathom</h4></label>
+            <input formControlName="pregunta2" type="text" name="pregunta2" id="pregunta2">
+        </div>
+        <div class="pregunta pregunta3">
+            <label for="pregunta3"><h4>3)Com es diu el gènere que li encanta a Tito i amb el que voldría vestir sempre?</h4></label>
+            <input formControlName="pregunta3" type="text" name="pregunta3" id="pregunta3">
+        </div>
+        <div class="pregunta pregunta4">
+            <label for="pregunta4"><h4>4)Com es diu el personatge de One Piece, que te 3 espases, que li encanta a Tito?</h4></label>
+            <input formControlName="pregunta4" type="text" name="pregunta4" id="pregunta4">
+        </div>
+        <div class="pregunta pregunta5">
+            <label for="pregunta5"><h4>5)De quina casa sería <span class="blue">Tito</span> si haguera anat a Hogwarts?</h4></label>
+            <input formControlName="pregunta5" type="text" name="pregunta5" id="pregunta5">
+        </div>
+        <div class="pregunta pregunta6">
+            <label for="pregunta6"><h4>6)Quin es el altre nom de Goku en el anime de Dragon Ball?</h4></label>
+            <input formControlName="pregunta6" type="text" name="pregunta6" id="pregunta6">
+        </div>
+        <br>
+        <button>Contesta</button>
+    </form>
+
+    <div *ngIf="prueba5 && acierto">
+        <p>Let's Goooo, has acertat i has guanyat la primera pista...que es... ... ...</p>
+        <h3>Vila Olimpica</h3>
+        <p>Apuntatela</p>
+        <a routerLink="game/game3"> Seguim avant -></a>
+    </div>
+    <div *ngIf="prueba5 && error">
+        <p>Ooooh baia :( has fallado</p>
+    </div>
+</div>
