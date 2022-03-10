@@ -12,4 +12,8 @@
 <div *ngIf="acierto">
     <app-mapa></app-mapa>
     <p>Quan descobrixques on es i arribeu, parla amb el teu acompanyant</p>
+    <form (submit)="ilusion()" [formGroup]="formIlusion">
+        <input formControlName="pass" type="text" name="pass" id="pass">
+        <button [disabled]="formIlusion.invalid">Contraseña</button>
+    </form>
 </div>
