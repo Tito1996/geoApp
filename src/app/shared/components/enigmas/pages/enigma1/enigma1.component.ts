@@ -31,10 +31,10 @@ export class Enigma1Component implements OnInit {
   public comprobarCoord() {
     this.getLocation();
     setTimeout(() => {
-      if (this.miPosicion.lat === 41.3907285 && this.
-        miPosicion.lng === 2.1745089) {
+      if (this.miPosicion.lat === 41.39 && this.
+        miPosicion.lng === 2.16) {
           this.acierto = true;
-        } else this.acierto = false;
+        } else this.fallo = true;
     }, 500);
   }
 

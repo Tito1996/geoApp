@@ -90,8 +90,8 @@ export class AlcobaAzulComponent implements OnInit {
 
   public comprobarUbicacion() {
     const mathom = {
-      lat: 41.3828547520356,
-      lng: 2.1734920947154532
+      lat: 41.38,
+      lng: 2.17
     }
     this.getLocation();
     if(this.posicion.lat === mathom.lat && this.posicion.lng === mathom.lng) {
