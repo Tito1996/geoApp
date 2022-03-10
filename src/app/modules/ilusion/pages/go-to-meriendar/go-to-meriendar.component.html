@@ -1,0 +1,20 @@
+<app-header></app-header>
+<div>
+    <p>Si estas llegint este missatge ya sabrás el que tens que fer. Per tant el unic que tens que fer es ficar el que toque vaix per a conexer la següent pista</p>
+    <form (submit)="wordle()" [formGroup]="formWordle">
+        <input formControlName="pass" type="text" name="pass" id="pass">
+        <button [disabled]="formWordle.invalid">Contraseña</button>
+    </form>
+</div>
+
+<div *ngIf="acierto">
+    <p>
+        Ves a estes coordenades i trobaràs el següent tresor
+    </p>
+    <p>
+        latitud:  41.3809630940808
+    </p>
+    <p>
+        longitud:  2.179273434357318
+    </p>
+</div>

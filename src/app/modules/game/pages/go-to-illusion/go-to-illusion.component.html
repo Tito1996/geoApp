@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div>
+    <p>Per a poder trobar el pròxim tresor, primer tens que dirigirte a un lloc especial: al mon de les il*lusions</p>
+    <p>Com arribarem allí?</p>
+    <p>Wordle es la resposta</p>
+    <form (submit)="wordle()" [formGroup]="formWordle">
+        <input formControlName="pass" type="text" name="pass" id="pass">
+        <button [disabled]="formWordle.invalid">Contraseña</button>
+    </form>
+</div>
+
+<div *ngIf="acierto">
+    <app-mapa></app-mapa>
+    <p>Quan descobrixques on es i arribeu, parla amb el teu acompanyant</p>
+</div>

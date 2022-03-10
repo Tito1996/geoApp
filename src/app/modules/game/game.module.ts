@@ -9,6 +9,7 @@ import { AlcobaAzulComponent } from './pages/alcoba-azul/alcoba-azul.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MonumentosComponent } from './pages/monumentos/monumentos.component';
 import { GoToGourmetComponent } from './pages/go-to-gourmet/go-to-gourmet.component';
+import { GoToIllusionComponent } from './pages/go-to-illusion/go-to-illusion.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { GoToGourmetComponent } from './pages/go-to-gourmet/go-to-gourmet.compon
     GamePageComponent,
     AlcobaAzulComponent,
     MonumentosComponent,
-    GoToGourmetComponent
+    GoToGourmetComponent,
+    GoToIllusionComponent
   ],
   imports: [
     CommonModule,

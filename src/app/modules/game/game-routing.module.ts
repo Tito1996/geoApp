@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlcobaAzulComponent } from './pages/alcoba-azul/alcoba-azul.component';
 import { GamePageComponent } from './pages/game-page/game-page.component';
 import { GoToGourmetComponent } from './pages/go-to-gourmet/go-to-gourmet.component';
+import { GoToIllusionComponent } from './pages/go-to-illusion/go-to-illusion.component';
 import { MonumentosComponent } from './pages/monumentos/monumentos.component';
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'game4',
     component: GoToGourmetComponent
+  },
+  {
+    path: 'game5',
+    component: GoToIllusionComponent
   },
 ];
 

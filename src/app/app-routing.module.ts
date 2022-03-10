@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren:() => import(`./modules/game/game.module`).then(m => m.GameModule)
   },
   {
+    path: 'ilusion',
+    loadChildren:() => import(`./modules/ilusion/ilusion.module`).then(m => m.IlusionModule)
+  },
+  {
     path: 'error',
     loadChildren:() => import(`./modules/error/error.module`).then(m => m.ErrorModule)
   },

@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { EnigmasComponent } from './components/enigmas/enigmas.component';
 import { Enigma1Component } from './components/enigmas/pages/enigma1/enigma1.component';
 import { Enigma2Component } from './components/enigmas/pages/enigma2/enigma2.component';
+import { MapaComponent } from './components/mapa/mapa.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { Enigma2Component } from './components/enigmas/pages/enigma2/enigma2.com
     HeaderComponent,
     EnigmasComponent,
     Enigma1Component,
-    Enigma2Component
+    Enigma2Component,
+    MapaComponent
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { Enigma2Component } from './components/enigmas/pages/enigma2/enigma2.com
   ],
   exports: [
     HeaderComponent,
-    EnigmasComponent
+    EnigmasComponent,
+    MapaComponent
   ]
 })
 export class SharedModule { }
