@@ -93,14 +93,18 @@ export class AlcobaAzulComponent implements OnInit {
       lat: 41.38,
       lng: 2.17
     }
+    let intentos = 0;
     this.getLocation();
-    if(this.posicion.lat === mathom.lat && this.posicion.lng === mathom.lng) {
+    if((this.posicion.lat === mathom.lat && this.posicion.lng === mathom.lng) || intentos === 3) {
       this.prueba3 = false;
       this.prueba4 = false;
       this.prueba5 = true;
       this.acierto = false;
       this.error = false;
-    } else this.error = true;
+    } else {
+      this.error = true;
+      intentos++
+    }
   }
 
   private getLocation() {
